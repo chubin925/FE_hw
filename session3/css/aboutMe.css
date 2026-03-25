@@ -20,7 +20,7 @@
 }
 
 body {
-  background-image: url(/FE_hw/session3/img/kuma.jpeg);
+  background-image: url("../img/kuma.jpeg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center bottom;
@@ -103,7 +103,7 @@ section {
 .photo1 {
   width: 250px;
   height: 380px;
-  background-image: url("/FE_hw/session3/img/subin2.jpeg");
+  background-image: url("../img/subin2.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -208,7 +208,7 @@ footer {
 .photo3 {
   flex: 1;
   margin-top: 50px;
-  background-image: url(/FE_hw/session3/img/2026.jpeg);
+  background-image: url("../img/2026.jpeg");
   width: 250px;
   background-size: cover;
   background-repeat: no-repeat;
@@ -227,18 +227,18 @@ footer {
   box-shadow: 0px 10px 20px #e97ca097;
 }
 .mu1 {
-  background-image: url(/FE_hw/session3/img/mu1.png);
+  background-image: url("../img/mu1.png");
   position: relative;
   left: 50px;
 }
 
 .mu2 {
-  background-image: url(/FE_hw/session3/img/mu2.png);
+  background-image: url("../img/mu2.png");
   position: relative;
   bottom: 40px;
 }
 .mu3 {
-  background-image: url(/FE_hw/session3/img/mu3.png);
+  background-image: url("../img/mu3.png");
   position: relative;
   top: 50px;
   right: 50px;
