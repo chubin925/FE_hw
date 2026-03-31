@@ -80,6 +80,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: Pretendard;
 }
 
 header {
@@ -182,12 +183,14 @@ h3 {
   padding: 16px;
   align-self: stretch;
 
+  appearance: none;
+  -webkit-appearance: none;
+
   font-family: Pretendard;
-  font-family: pre;
   color: #8c827d;
   font-size: 18px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   line-height: 150%;
   letter-spacing: -0.54px;
 }
@@ -216,6 +219,11 @@ h3 {
   line-height: 150%;
   letter-spacing: -0.42px;
 }
-.text {
-  display: inline;
+
+input {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  appearance: none;
+  -webkit-appearance: none;
 }
