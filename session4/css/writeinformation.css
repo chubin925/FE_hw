@@ -1,8 +1,32 @@
 @font-face {
   font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Thin.woff2")
+    format("woff2");
+  font-weight: 100;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
   src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraLight.woff2")
     format("woff2");
   font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Light.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Regular.woff2")
+    format("woff2");
+  font-weight: 400;
   font-display: swap;
 }
 
@@ -13,6 +37,39 @@
   font-weight: 500;
   font-display: swap;
 }
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-SemiBold.woff2")
+    format("woff2");
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Bold.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-ExtraBold.woff2")
+    format("woff2");
+  font-weight: 800;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Pretendard";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/pretendard@1.0/Pretendard-Black.woff2")
+    format("woff2");
+  font-weight: 900;
+  font-display: swap;
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -95,10 +152,9 @@ h3 {
 }
 
 .info_div {
-  width: 904px;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   margin-bottom: 40px;
 }
 
@@ -115,6 +171,10 @@ h3 {
   justify-content: center;
 }
 
+.info_div > div {
+  width: 400px;
+}
+
 .info_div input {
   width: 368px;
   display: flex;
@@ -122,8 +182,40 @@ h3 {
   padding: 16px;
   align-self: stretch;
 
+  font-family: Pretendard;
+  font-family: pre;
   color: #8c827d;
   font-size: 18px;
-  line-height: 27px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
   letter-spacing: -0.54px;
+}
+
+#ex {
+  display: flex;
+  padding: 16px;
+  align-items: center;
+
+  color: #8c827d;
+  font-family: Pretendard;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 150%;
+  letter-spacing: -0.42px;
+}
+
+.ex {
+  padding: 16px;
+  color: #8c827d;
+  font-family: Pretendard;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 150%;
+  letter-spacing: -0.42px;
+}
+.text {
+  display: inline;
 }
