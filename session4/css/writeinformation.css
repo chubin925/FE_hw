@@ -107,7 +107,8 @@ header {
   gap: 24px;
 }
 
-.ds_header > a {
+.ds_header > a,
+.flow_p {
   white-space: nowrap;
   color: #fff;
   font-family: Pretendard;
@@ -154,7 +155,7 @@ h3 {
 
 .info_div {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   margin-bottom: 40px;
 }
@@ -173,11 +174,11 @@ h3 {
 }
 
 .info_div > div {
-  width: 400px;
+  width: 432px;
 }
 
 .info_div input {
-  width: 368px;
+  width: 400px;
   display: flex;
   border-radius: 9999px;
   padding: 16px;
@@ -203,10 +204,10 @@ h3 {
   color: #8c827d;
   font-family: Pretendard;
   font-style: normal;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 300;
-  line-height: 150%;
-  letter-spacing: -0.42px;
+  line-height: 130%;
+  letter-spacing: -0.36px;
 }
 
 .ex {
@@ -214,10 +215,10 @@ h3 {
   color: #8c827d;
   font-family: Pretendard;
   font-style: normal;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 300;
-  line-height: 150%;
-  letter-spacing: -0.42px;
+  line-height: 130%;
+  letter-spacing: -0.36px;
 }
 
 input {
@@ -247,7 +248,7 @@ input {
   justify-content: center;
 }
 
-#btn > input {
+.good {
   color: #100;
   width: 219px;
 
@@ -265,5 +266,123 @@ input {
 }
 
 #plan {
-  
+  background-color: #ff7710;
+  color: rgb(255, 255, 255);
+  width: 219px;
+
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: -0.54px;
+
+  border-radius: 9999px;
+  padding: 16px;
+  align-self: stretch;
+
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+#btn {
+  display: flex;
+}
+
+.flow {
+  display: flex;
+  flex-direction: column;
+  width: 440px;
+  padding: 40px;
+  gap: 56px;
+}
+
+.btn2 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.flow_div {
+  display: flex;
+  padding: 0 24px;
+  height: 240px;
+  align-items: center;
+  gap: 16px;
+}
+
+.flow_p {
+  display: flex;
+  width: 135px;
+  height: 240px;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.btn2 > input {
+  width: 320px;
+}
+
+.plan {
+  background-color: #ff7710;
+  color: rgb(255, 255, 255);
+
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 150%;
+  letter-spacing: -0.54px;
+
+  border-radius: 9999px;
+  padding: 16px;
+  align-self: stretch;
+
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+#flow_id {
+  color: #8c827d;
+}
+.flow_p {
+  padding: 0px;
+  align-self: stretch;
+}
+.step_bar {
+  display: flex;
+  width: 30px;
+  height: 240px;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.step_bar > div {
+  width: 30px;
+  height: 30px;
+}
+
+.step1,
+.step2 {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  margin: 6.5px 7.5px 7.5px 7.5px;
+
+  transform: rotate(90deg);
+  aspect-ratio: 1/1;
+  border-radius: 16px;
+  background-color: #ff7710;
+}
+
+.step3,
+.step4 {
+  display: flex;
+  width: 16px;
+  height: 16px;
+  margin: 6.5px 7.5px 7.5px 7.5px;
+
+  transform: rotate(90deg);
+  aspect-ratio: 1/1;
+  border-radius: 16px;
+  background-color: #8c827d;
 }
