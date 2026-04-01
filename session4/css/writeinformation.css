@@ -446,5 +446,25 @@ footer p {
   gap: 12px;
 }
 .sns {
-margin-right: 10px;
+  margin-right: 10px;
+}
+
+/* 
+모바일, 태블릿 */
+@media all and (max-width: 990px) {
+  .mobile-only {
+    display: block;
+  }
+  header {
+    display: flex;
+    height: 80px;
+    gap: 113px;
+    align-items: flex-start;
+    padding-right: 420px;
+    align-self: stretch;
+  }
+}
+
+.mobile-only {
+  display: none;
 }
