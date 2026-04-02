@@ -134,6 +134,9 @@ body {
 }
 
 .flow {
+  position: fixed;
+  top: 40px;
+  right: 10px;
   width: 400px;
   flex-shrink: 0;
 }
@@ -271,6 +274,7 @@ input {
 }
 
 .good {
+  background-color: #fff;
   color: #100;
   width: 219px;
 
@@ -288,9 +292,12 @@ input {
 }
 
 #plan {
+  width: 219px;
+}
+
+.plan {
   background-color: #ff7710;
   color: rgb(255, 255, 255);
-  width: 219px;
 
   font-weight: 600;
   font-size: 18px;
@@ -307,6 +314,7 @@ input {
 
 #btn {
   display: flex;
+  gap: 10px;
 }
 
 .flow {
@@ -343,23 +351,6 @@ input {
 
 .btn2 > input {
   width: 320px;
-}
-
-.plan {
-  background-color: #ff7710;
-  color: rgb(255, 255, 255);
-
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 150%;
-  letter-spacing: -0.54px;
-
-  border-radius: 9999px;
-  padding: 16px;
-  align-self: stretch;
-
-  appearance: none;
-  -webkit-appearance: none;
 }
 
 #flow_id {
@@ -533,6 +524,8 @@ footer p {
     letter-spacing: -0.6px;
   }
 
+  /* step2, 인적사항 입력 */
+
   .section_1 {
     display: flex;
     flex-direction: column;
@@ -563,6 +556,7 @@ footer p {
     display: none;
   } */
 
+  /* 인적사항 입력칸 */
   .info_div {
     display: flex;
     flex-direction: column;
@@ -635,6 +629,7 @@ footer p {
     justify-content: center;
   }
 
+  /* 지원파트 버튼 */
   #btn {
     display: flex;
     width: 390px;
