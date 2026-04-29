@@ -1,0 +1,4 @@
+myvenv/
+wordcount/myvenv/
+.DS_Store
+db.sqlite3
