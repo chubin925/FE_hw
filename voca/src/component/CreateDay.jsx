@@ -7,13 +7,18 @@ export default function CreateDay() {
   const navigate = useNavigate();
 
   function addDay() {
+    const nextDay =
+      days.length === 0
+        ? 1
+        : Math.max(...days.map((day) => Number(day.day))) + 1;
+
     fetch("http://localhost:3001/days/", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        day: days.length + 1,
+        day: nextDay,
       }),
     }).then((res) => {
       if (res.ok) {

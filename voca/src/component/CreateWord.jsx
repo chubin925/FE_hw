@@ -18,7 +18,7 @@ export default function CreateWord() {
     if (!isLoading && dayRef.current && engRef.current && korRef.current) {
       setIsLoading(true);
 
-      const day = dayRef.current.value;
+      const day = Number(dayRef.current.value);
       const eng = engRef.current.value;
       const kor = korRef.current.value;
 
@@ -37,10 +37,15 @@ export default function CreateWord() {
         if (res.ok) {
           alert("생성이 완료되었습니다!");
           navigate(`/day/${day}`);
-          setIsLoading(false);
         }
+
+        setIsLoading(false);
       });
     }
+  }
+
+  if (days === null) {
+    return <span>Loading...</span>;
   }
 
   return (
@@ -60,7 +65,7 @@ export default function CreateWord() {
         <select ref={dayRef}>
           {days.map((day) => (
             <option key={day.id} value={day.day}>
-              {day.id}
+              Day {day.day}
             </option>
           ))}
         </select>

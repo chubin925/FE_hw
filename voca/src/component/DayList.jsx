@@ -12,7 +12,7 @@ export default function DayList() {
     <ListDay>
       {days.map((day) => (
         <DayItem key={day.id}>
-          <DayLink to={`/day/${day.day}`}>Day {day.id}</DayLink>
+          <DayLink to={`/day/${day.day}`}>Day {day.day}</DayLink>
         </DayItem>
       ))}
     </ListDay>
