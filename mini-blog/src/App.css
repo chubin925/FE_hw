@@ -1,0 +1,68 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.page {
+  width: 700px;
+  margin: 40px auto;
+}
+
+h2 {
+  text-align: center;
+}
+
+.button {
+  padding: 8px 16px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 6px;
+  background-color: #eeeeee;
+  cursor: pointer;
+}
+
+.list-item {
+  width: 100%;
+  padding: 16px;
+  margin: 10px 0;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.list-item:hover {
+  background-color: #f5f5f5;
+}
+
+.post-box {
+  padding: 20px;
+  margin: 20px 0;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+}
+
+.post-box p {
+  white-space: pre-wrap;
+  line-height: 1.6;
+}
+
+.comment-item {
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #dddddd;
+  border-radius: 6px;
+}
+
+.text-input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  resize: none;
+  font-size: 16px;
+}
