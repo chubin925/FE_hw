@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import data from "../../db/data.json";
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const PageWrapper = styled.div`
   width: 720px;
@@ -57,27 +58,34 @@ const PostItem = styled(Link)`
   }
 `;
 
-function PostList() {
-  return (
-    <PostListWrapper>
-      {data.posts.map((post) => (
-        <PostItem to={`/post/${post.id}`} key={post.id}>
-          {post.title}
-        </PostItem>
-      ))}
-    </PostListWrapper>
-  );
-}
-
 export default function MainPage() {
+  const { postId } = useParams();
+
+  const [post, setPost] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:3001/posts/")
+      .then((res) => {
+        return res.json();
+      })
+      .then((post) => {
+        setPost(post);
+      });
+  }, [postId]);
+
   return (
     <PageWrapper>
       <HeaderArea>
         <WriteButton to="/write">글 작성하기</WriteButton>
         <Title>수빈이의 미니 블로그</Title>
       </HeaderArea>
-
-      <PostList />
+      <PostListWrapper>
+        {post.map((post) => (
+          <PostItem to={`/post/${post.id}`} key={post.id}>
+            {post.title}
+          </PostItem>
+        ))}
+      </PostListWrapper>
     </PageWrapper>
   );
 }

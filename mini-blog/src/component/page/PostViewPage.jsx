@@ -1,6 +1,6 @@
 import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
-import data from "../../db/data.json";
+import { useEffect, useRef, useState } from "react";
 
 const PageWrapper = styled.div`
   width: 720px;
@@ -85,8 +85,18 @@ const CommentButton = styled.button`
 
 export default function PostViewPage() {
   const { postId } = useParams();
+  const commentRef = useRef(null);
+  const [post, setPost] = useState(null);
 
-  const post = data.posts.find((post) => Number(post.id) === Number(postId));
+  useEffect(() => {
+    fetch(`http://localhost:3001/posts/${postId}`)
+      .then((res) => {
+        return res.json();
+      })
+      .then((post) => {
+        setPost(post);
+      });
+  }, [postId]);
 
   if (!post) {
     return (
@@ -96,6 +106,25 @@ export default function PostViewPage() {
       </PageWrapper>
     );
   }
+
+  const inputComment = () => {
+    const newComment = {
+      id: Date.now(),
+      content: commentRef.current.value,
+    };
+    const updateComment = [...post.comments, newComment];
+
+    fetch(`http://localhost:3001/posts/${postId}`, {
+      method: "PATCH",
+      body: JSON.stringify({
+        comments: updateComment,
+      }),
+    });
+    setPost({
+      ...post,
+      comments: updateComment,
+    });
+  };
 
   return (
     <PageWrapper>
@@ -114,8 +143,8 @@ export default function PostViewPage() {
         ))}
       </CommentList>
 
-      <CommentInput placeholder="댓글을 입력하세요" />
-      <CommentButton>댓글 작성하기</CommentButton>
+      <CommentInput ref={commentRef} placeholder="댓글을 입력하세요" />
+      <CommentButton onClick={inputComment}>댓글 작성하기</CommentButton>
     </PageWrapper>
   );
 }

@@ -10,6 +10,11 @@ export default function CommentList({ comments }) {
       {comments.map((comment) => (
         <CommentListItem key={comment.id} comment={comment} />
       ))}
+
+    
+
+
+
     </div>
   );
 }

@@ -24,6 +24,14 @@
         {
           "id": 15,
           "content": "오늘도 좋은 글 감사합니다!👍"
+        },
+        {
+          "id": 1778129133419,
+          "content": "dfasdf"
+        },
+        {
+          "id": 1778129146702,
+          "content": "ㅁㅇㄴㄹㅁㄴㅇ"
         }
       ]
     },
@@ -162,5 +170,6 @@
         }
       ]
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
